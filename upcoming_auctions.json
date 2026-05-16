@@ -1,221 +1,5 @@
 [
   {
-    "county": "Tarrant",
-    "url": "https://tarrant.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:44"
-  },
-  {
-    "county": "Nueces",
-    "url": "https://nueces.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff",
-      "register",
-      "login"
-    ],
-    "last_updated": "2026-05-16 10:56:44"
-  },
-  {
-    "county": "Denton",
-    "url": "https://denton.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:45"
-  },
-  {
-    "county": "Montgomery",
-    "url": "https://montgomery.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:45"
-  },
-  {
-    "county": "Mclennan",
-    "url": "https://mclennan.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:46"
-  },
-  {
-    "county": "Bell",
-    "url": "https://bell.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:46"
-  },
-  {
-    "county": "Bexar",
-    "url": "https://bexar.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff",
-      "register",
-      "login"
-    ],
-    "last_updated": "2026-05-16 10:56:47"
-  },
-  {
-    "county": "Brazoria",
-    "url": "https://brazoria.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:47"
-  },
-  {
-    "county": "Dallas",
-    "url": "https://dallas.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff",
-      "register",
-      "login"
-    ],
-    "last_updated": "2026-05-16 10:56:47"
-  },
-  {
-    "county": "Harris",
-    "url": "https://harris.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale"
-    ],
-    "last_updated": "2026-05-16 10:56:48"
-  },
-  {
-    "county": "Collin",
-    "url": "https://collin.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:48"
-  },
-  {
-    "county": "Hidalgo",
-    "url": "https://hidalgo.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff",
-      "register",
-      "login"
-    ],
-    "last_updated": "2026-05-16 10:56:49"
-  },
-  {
-    "county": "Lubbock",
-    "url": "https://lubbock.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:49"
-  },
-  {
-    "county": "Williamson",
-    "url": "https://williamson.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:50"
-  },
-  {
-    "county": "Cameron",
-    "url": "https://cameron.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff",
-      "register",
-      "login"
-    ],
-    "last_updated": "2026-05-16 10:56:50"
-  },
-  {
-    "county": "Travis",
-    "url": "https://travis.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:50"
-  },
-  {
     "county": "Fortbend",
     "url": "https://fortbend.texas.sheriffsaleauctions.com",
     "status": "Online & Operational",
@@ -228,20 +12,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-05-16 10:56:51"
-  },
-  {
-    "county": "Webb",
-    "url": "https://webb.texas.sheriffsaleauctions.com",
-    "status": "Online & Operational",
-    "detected_markers": [
-      "auction",
-      "realauction",
-      "sale",
-      "foreclose",
-      "sheriff"
-    ],
-    "last_updated": "2026-05-16 10:56:51"
+    "last_updated": "2026-05-16 11:13:26"
   },
   {
     "county": "Galveston",
@@ -256,7 +27,37 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-05-16 10:56:51"
+    "last_updated": "2026-05-16 11:13:26"
+  },
+  {
+    "county": "Cameron",
+    "url": "https://cameron.texas.sheriffsaleauctions.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:27"
+  },
+  {
+    "county": "Bexar",
+    "url": "https://bexar.texas.sheriffsaleauctions.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:27"
   },
   {
     "county": "Elpaso",
@@ -271,6 +72,92 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-05-16 10:56:52"
+    "last_updated": "2026-05-16 11:13:27"
+  },
+  {
+    "county": "Nueces",
+    "url": "https://nueces.texas.sheriffsaleauctions.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:28"
+  },
+  {
+    "county": "Dallas",
+    "url": "https://dallas.texas.sheriffsaleauctions.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:28"
+  },
+  {
+    "county": "Montgomery",
+    "url": "https://montgomery.texas.realforeclose.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:28"
+  },
+  {
+    "county": "Hidalgo",
+    "url": "https://hidalgo.texas.sheriffsaleauctions.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:29"
+  },
+  {
+    "county": "Travis",
+    "url": "https://travis.texas.realforeclose.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale",
+      "foreclose",
+      "sheriff",
+      "register",
+      "login"
+    ],
+    "last_updated": "2026-05-16 11:13:29"
+  },
+  {
+    "county": "Harris",
+    "url": "https://harris.texas.sheriffsaleauctions.com",
+    "status": "Online & Operational",
+    "detected_markers": [
+      "auction",
+      "realauction",
+      "sale"
+    ],
+    "last_updated": "2026-05-16 11:13:29"
   }
 ]
