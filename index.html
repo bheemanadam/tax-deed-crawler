@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Tax Deed Lead Matrix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen p-4 sm:p-8">
+    <div class="max-w-6xl mx-auto">
+        
+        <header class="mb-8 border-b border-gray-800 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+                <h1 class="text-3xl font-extrabold text-emerald-400 tracking-tight">Texas Tax Deed Auctions</h1>
+                <p class="text-gray-400 text-sm mt-1">Programmatic cloud pipeline tracking municipal real estate portal status.</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 px-4 py-2 rounded-lg text-xs text-gray-400">
+                Data Source: <code class="text-emerald-400 font-mono">upcoming_auctions.json</code>
+            </div>
+        </header>
+
+        <div class="overflow-hidden bg-gray-900 border border-gray-800 rounded-xl shadow-2xl">
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-800 text-left text-sm">
+                    <thead class="bg-gray-900/50 text-gray-400 font-semibold text-xs uppercase tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4">County</th>
+                            <th class="px-6 py-4">Status</th>
+                            <th class="px-6 py-4">Verification Flags</th>
+                            <th class="px-6 py-4">Timestamp (UTC)</th>
+                            <th class="px-6 py-4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-table-target" class="divide-y divide-gray-800 bg-gray-950/20">
+                        <tr>
+                            <td colspan="5" class="px-6 py-12 text-center text-gray-500 animate-pulse">
+                                Extracting local storage pipeline data array...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function buildDashboard() {
+            const tableBody = document.getElementById('leads-table-target');
+            try {
+                // Reads your repository JSON directly relative to host routing
+                const targetEndpoint = './upcoming_auctions.json';
+                const response = await fetch(targetEndpoint);
+                
+                if (!response.ok) throw new Error("File delivery connection failure.");
+                const data = await response.json();
+
+                if (data.length === 0) {
+                    tableBody.innerHTML = `<tr><td colspan="5" class="px-6 py-12 text-center text-gray-500">Zero active listings currently verified inside database indices.</td></tr>`;
+                    return;
+                }
+
+                tableBody.innerHTML = data.map(lead => {
+                    // Generates visual pill badges for each signature found
+                    const badges = lead.detected_markers.map(marker => 
+                        `<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-mono font-medium bg-gray-800 text-gray-300 border border-gray-700">${marker}</span>`
+                    ).join(' ');
+
+                    return `
+                        <tr class="hover:bg-gray-900/40 transition-colors duration-150">
+                            <td class="px-6 py-4 font-bold text-white text-base">${lead.county}</td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800/60">
+                                    ● ${lead.status}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4"><div class="flex flex-wrap gap-1.5 max-w-xs">${badges}</div></td>
+                            <td class="px-6 py-4 text-xs font-mono text-gray-400">${lead.last_updated}</td>
+                            <td class="px-6 py-4">
+                                <a href="${lead.url}" target="_blank" class="inline-flex items-center font-bold text-emerald-400 hover:text-emerald-300 hover:underline transition-all">
+                                    Open Portal 
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+
+            } catch (err) {
+                console.error(err);
+                tableBody.innerHTML = `<tr><td colspan="5" class="px-6 py-12 text-center text-red-400 font-medium">Failed to parse JSON datastream components: ${err.message}</td></tr>`;
+            }
+        }
+        buildDashboard();
+    </script>
+</body>
+</html>
