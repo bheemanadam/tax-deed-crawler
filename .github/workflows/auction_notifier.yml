@@ -4,11 +4,15 @@ on:
   schedule:
     # Runs exactly twice a week: Tuesday and Friday at 9:00 AM UTC (5:00 AM EST)
     - cron: '0 9 * * 2,5'
-  workflow_dispatch: # Allows you to also trigger the crawler manually anytime via the UI button
+  workflow_dispatch: # Allows you to trigger the crawler manually via the UI button
 
 jobs:
   run-crawler:
     runs-on: ubuntu-latest
+    # FIX FOR EXIT CODE 128: Grants explicit write permissions to save files back to the repo
+    permissions:
+      contents: write
+      
     steps:
       # 1. Pull the code from your private repo into the cloud runner
       - name: Checkout Repository Code
@@ -18,21 +22,17 @@ jobs:
       - name: Initialize Python Environment
         uses: actions/setup-python@v5
         with:
-          python-python: '3.11'
+          python-version: '3.11' # FIX FOR TYPO: Changed from python-python
           cache: 'pip'
 
-      # 3. Restore your scraping requirements
+      # 3. Restore your scraping requirements (Optimized for speed)
       - name: Install Libraries
         run: |
           python -m pip install --upgrade pip
-          pip install httpx scrapegraphai langchain-google-genai
+          pip install httpx
 
-      # 4. Execute your target scraping scripts
+      # 4. Execute your target scraping script
       - name: Run Auction Scanner
-        env:
-          # Securely injects keys into cloud execution memory without exposing them
-          PROD_GOOGLE_API_KEY: ${{ secrets.PROD_GOOGLE_API_KEY }}
-          PROD_GOOGLE_PSE_CX: ${{ secrets.PROD_GOOGLE_PSE_CX }}
         run: |
           python main_crawler.py
 
@@ -41,6 +41,6 @@ jobs:
         run: |
           git config --global user.name "AuctionBot"
           git config --global user.email "bot@github.com"
-          git add upcoming_auctions.json
+          git add upcoming_auctions.json || true
           git commit -m "Automated Scan: Updated Auction Data Logs" || exit 0
           git push
