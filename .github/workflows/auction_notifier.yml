@@ -9,7 +9,6 @@ on:
 jobs:
   run-crawler:
     runs-on: ubuntu-latest
-    # FIX FOR EXIT CODE 128: Grants explicit write permissions to save files back to the repo
     permissions:
       contents: write
       
@@ -22,8 +21,8 @@ jobs:
       - name: Initialize Python Environment
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # FIX FOR TYPO: Changed from python-python
-          cache: 'pip'
+          python-version: '3.11'
+          # Caching configuration removed to prevent requirements.txt file-matching crash
 
       # 3. Restore your scraping requirements (Optimized for speed)
       - name: Install Libraries
