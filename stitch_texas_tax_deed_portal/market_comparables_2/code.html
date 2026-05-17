@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdad7",
+                        "secondary-fixed": "#d9e3f7",
+                        "surface-container-highest": "#353437",
+                        "tertiary-container": "#ff7a73",
+                        "primary-container": "#10b981",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "on-tertiary": "#68000a",
+                        "on-primary-fixed-variant": "#005236",
+                        "outline": "#86948a",
+                        "surface-container": "#201f21",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e5e1e4",
+                        "on-secondary-container": "#afb9cc",
+                        "secondary-fixed-dim": "#bdc7db",
+                        "secondary-container": "#404a5a",
+                        "primary-fixed-dim": "#4edea3",
+                        "inverse-on-surface": "#313032",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#4edea3",
+                        "on-primary-fixed": "#002113",
+                        "primary": "#4edea3",
+                        "surface-dim": "#131315",
+                        "surface": "#131315",
+                        "on-secondary-fixed-variant": "#3d4757",
+                        "surface-container-lowest": "#0e0e10",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-tertiary-fixed": "#410004",
+                        "on-primary": "#003824",
+                        "surface-variant": "#353437",
+                        "secondary": "#bdc7db",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#121c2a",
+                        "on-surface-variant": "#bbcabf",
+                        "surface-container-low": "#1c1b1d",
+                        "surface-container-high": "#2a2a2c",
+                        "on-primary-container": "#00422b",
+                        "inverse-primary": "#006c49",
+                        "on-background": "#e5e1e4",
+                        "tertiary": "#ffb3ad",
+                        "background": "#131315",
+                        "primary-fixed": "#6ffbbe",
+                        "outline-variant": "#3c4a42",
+                        "on-tertiary-container": "#79000e",
+                        "on-secondary": "#273140",
+                        "on-surface": "#e5e1e4",
+                        "surface-bright": "#39393b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-desktop": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "16px",
+                        "gutter-mobile": "16px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "data-md": ["JetBrains Mono"],
+                        "data-lg": ["JetBrains Mono"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "data-md": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "data-lg": ["18px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .abyssal-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(19,19,21,1) 100%);
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .status-pulse {
+            box-shadow: 0 0 0 0 rgba(78, 222, 163, 0.4);
+            animation: pulse-emerald 2s infinite;
+        }
+        @keyframes pulse-emerald {
+            0% { box-shadow: 0 0 0 0 rgba(78, 222, 163, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(78, 222, 163, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(78, 222, 163, 0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md abyssal-gradient min-h-screen">
+<!-- Top Navigation -->
+<header class="sticky top-0 w-full bg-surface/80 backdrop-blur-md z-50 border-b border-outline-variant flex justify-between items-center px-margin-mobile h-16 md:px-margin-desktop">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-headline-md text-headline-md font-semibold text-primary">Market Comps</h1>
+</div>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg pl-10 pr-4 py-2 text-body-sm focus:outline-none focus:border-primary transition-colors" placeholder="Search address..." type="text"/>
+</div>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnyGG5-ctXAoTo4g5pb65_jAJw5qvDKcIy1fMlWOgss0EgV3nQ26UzozI0wNBj8-C02JNyFoVrZyp6CxmHv8C3OK_A45YsEXs20KOwd7CLy_C1UK1nmUoVlkYe5iZpcrrMQ2fVDWZml3dm3cPMhUC-wG1YoQYCZP__oh2YBbVposB3ylzfH2xKZKU9A9h2K2oOguljJNL0ltWi77JvF0k7SffKhHKLClUTooBZ8iM0L00PKm2dA9Wdyb3LVBYpkZgGRfK1kWYhrbw"/>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile py-8 md:px-margin-desktop pb-32">
+<!-- Search Bar Mobile -->
+<div class="md:hidden mb-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg pl-10 pr-4 py-3 text-body-md focus:outline-none focus:border-primary transition-colors" placeholder="Search address..." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Property Overview Card -->
+<section class="lg:col-span-8 flex flex-col gap-unit">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group">
+<div class="relative h-64 md:h-96 w-full">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious modern Texas ranch-style home at twilight, featuring dark limestone walls and expansive glass windows. The architecture is sharp and contemporary, set against a dramatic Austin sunset with deep indigo and amber hues. The lighting is low-key and professional, emphasizing the sleek textures of wood and stone under a clear desert sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA8Ovx9i4HSnGEYC1zy_CAYMvvr1NbGUi6nDOH8pr_5rmRihUgVdqsbLnK9mTrT_4dVqhVJKcLN-4Qx6DgvU1wEGwDtMRIYCK8BHgTV45diXbB4CEfa8CTAgEs2UHUh1k58yU-FfBsxb3sMGDkGnpU1GuUmJpW0DvN6XeVpigod8r_eYQwv088RH0umSgTMj3gtJdD_MyYf42LRwc_-Vx8cKc3udfFIP1QeL11sV012gwhZ1t3WueHpF8ItMJzdh5vYy9ZKoXer-g"/>
+<div class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-on-primary status-pulse"></span>
+<span class="font-label-caps text-label-caps">ACTIVE COMPS</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest">TEXAS RESIDENTIAL</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mt-1">123 Austin Way</h2>
+<p class="font-body-md text-on-surface-variant">Austin, TX 78701 • 4 Beds • 3 Baths • 2,850 sqft</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant p-4 rounded-lg flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ZILLOW ZESTIMATE</span>
+<span class="font-data-lg text-data-lg text-primary mt-1">$450,000</span>
+<div class="mt-2 flex items-center gap-1 bg-primary-container/20 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="verified">verified</span>
+<span class="font-label-caps text-[10px] text-primary">CONFIDENCE SCORE: HIGH</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Market Valuation Insights -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop mt-4">
+<div class="bg-surface-container-low border border-outline-variant p-6 rounded-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">RENT ESTIMATE</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-lg text-data-lg text-on-surface">$2,800</span>
+<span class="font-body-sm text-on-surface-variant">/mo</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-2">Based on 12 nearby listings in last 90 days.</p>
+</div>
+<div class="bg-surface-container-low border border-outline-variant p-6 rounded-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">MARKET APPRECIATION</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-lg text-data-lg text-primary">+4.2%</span>
+<span class="font-body-sm text-on-surface-variant">YOY</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-2">Outperforming Travis County average by 0.8%.</p>
+</div>
+</div>
+</section>
+<!-- Neighborhood Comparables List -->
+<aside class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline-md text-headline-md">Nearby Comps</h3>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="filter_list">filter_list</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Comp 1 -->
+<div class="group cursor-pointer hover:bg-surface-container-high p-3 -mx-3 rounded-lg transition-colors border-b border-outline-variant last:border-0 pb-4">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant">LOT #4492</span>
+<span class="font-data-md text-data-md text-primary">$1.2M</span>
+</div>
+<h4 class="font-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">882 Congress Ave</h4>
+<div class="flex items-center gap-4 mt-1 text-on-surface-variant">
+<span class="text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="near_me">near_me</span> 0.2 miles
+                                </span>
+<span class="text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Sold 3d ago
+                                </span>
+</div>
+</div>
+<!-- Comp 2 -->
+<div class="group cursor-pointer hover:bg-surface-container-high p-3 -mx-3 rounded-lg transition-colors border-b border-outline-variant last:border-0 pb-4">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant">LOT #4488</span>
+<span class="font-data-md text-data-md text-primary">$985K</span>
+</div>
+<h4 class="font-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">1104 San Jacinto Blvd</h4>
+<div class="flex items-center gap-4 mt-1 text-on-surface-variant">
+<span class="text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="near_me">near_me</span> 0.5 miles
+                                </span>
+<span class="text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Sold 12d ago
+                                </span>
+</div>
+</div>
+<!-- Comp 3 -->
+<div class="group cursor-pointer hover:bg-surface-container-high p-3 -mx-3 rounded-lg transition-colors border-b border-outline-variant last:border-0 pb-4">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant">LOT #4471</span>
+<span class="font-data-md text-data-md text-primary">$1.15M</span>
+</div>
+<h4 class="font-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">900 Trinity St</h4>
+<div class="flex items-center gap-4 mt-1 text-on-surface-variant">
+<span class="text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="near_me">near_me</span> 0.6 miles
+                                </span>
+<span class="text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Sold 1mo ago
+                                </span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-outline-variant rounded-lg font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+                        VIEW FULL MAP DATA
+                    </button>
+</div>
+<!-- Valuation Source Logos -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest text-center mb-6">CERTIFIED DATA SOURCES</p>
+<div class="flex justify-around items-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<img alt="Zillow Logo" class="h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlnCjXqFGlxg8KtHmqrPlS50gqIL5d1U7O0fULO3k44HiFvYtbtuQ1piuocptq_n4s-UWyHiAUo74u4TssHA--40HftdU_c4jEcXUkByKyoFhGaEOnMRR9aGh07bZnbMGDDelAFqWDAyPA-260AAOprpRVdD-qDjgaO3fe7Hh3Obl4GWonRTLEDz6zTAoqdBMt-BIOlNF9dymuvGc1pyOxUybR_KLRjkunlApyURMTqB1b7Kq-dK2XJspZs8K3C_TkVpjK8PkpVIM"/>
+<img alt="Redfin Logo" class="h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDQvmegeCrw36OkONDFUI_2gVH09OUdh---9fZx_dkgJbtk2WHNjCbXFteSCWEvEGgk8FH8m0hdLoXfaj-i9YCv6z8Aqi7gfFs62BNiTDMNk1hjYY0GwhK8lY2GvKzJa0P-qQo0naFDWbpRJnWFhlAY48FHMD1ud690TRoeftePZluaWQcgn9d3RDXpbJtuqlm7N5KsxH-Tyr31mLgq5cgvZTQxMIYam2RX4uXrBcVxE2bqPYCZhHzLiNb_FHy16LXPt-8QQ5SifI"/>
+<img alt="Realtor Logo" class="h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqW2pKf_XQnlXs0BZS3HqT_sKEv3cttC09-yO6tqH3eu8eShVpk_oOKGYBEAC1wxcP9IU6woqriNWO_eO8VnCqCFesrANpqpToWslC1F075qvADO0-9V4LoeA-4boHGgBm8uiQww6gehuHi3eyUzIYw4Yuxluafn4MRmeQIYNECUGGL68P7APsBectFujWxCofeEd0oAJDgP9oqPBP6wn4e3IJAwFGHd9BfdbVSWZCY7oGEX4kEie8fvAxJ6iA4T4hYNyxpNEar-g"/>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md border-t border-outline-variant flex justify-around items-center h-20 pb-safe px-gutter-mobile">
+<!-- Dashboard -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-caps text-label-caps mt-1">Dashboard</span>
+</a>
+<!-- Map -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-label-caps text-label-caps mt-1">Map</span>
+</a>
+<!-- Auctions (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-primary font-bold active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="gavel" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="font-label-caps text-label-caps mt-1">Auctions</span>
+</a>
+<!-- Watchlist -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-label-caps text-label-caps mt-1">Watchlist</span>
+</a>
+</nav>
+<!-- FAB (Suppressed based on context: Details Page) -->
+</body></html>

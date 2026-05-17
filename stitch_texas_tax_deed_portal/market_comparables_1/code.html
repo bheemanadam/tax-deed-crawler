@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texas Tax Deed Portal - Comparable Properties</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#404a5a",
+                        "primary-fixed": "#6ffbbe",
+                        "surface-container": "#201f21",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "tertiary": "#ffb3ad",
+                        "outline": "#86948a",
+                        "on-secondary-fixed": "#121c2a",
+                        "surface-dim": "#131315",
+                        "surface-container-lowest": "#0e0e10",
+                        "on-secondary-container": "#afb9cc",
+                        "surface-container-highest": "#353437",
+                        "primary": "#4edea3",
+                        "surface-tint": "#4edea3",
+                        "on-tertiary-container": "#79000e",
+                        "on-primary": "#003824",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "secondary-fixed": "#d9e3f7",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#410004",
+                        "secondary": "#bdc7db",
+                        "tertiary-container": "#ff7a73",
+                        "on-error": "#690005",
+                        "on-background": "#e5e1e4",
+                        "surface-bright": "#39393b",
+                        "secondary-fixed-dim": "#bdc7db",
+                        "outline-variant": "#3c4a42",
+                        "on-surface-variant": "#bbcabf",
+                        "surface-variant": "#353437",
+                        "surface-container-high": "#2a2a2c",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#00422b",
+                        "primary-fixed-dim": "#4edea3",
+                        "on-primary-fixed-variant": "#005236",
+                        "inverse-on-surface": "#313032",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-secondary-fixed-variant": "#3d4757",
+                        "on-surface": "#e5e1e4",
+                        "inverse-primary": "#006c49",
+                        "surface": "#131315",
+                        "primary-container": "#10b981",
+                        "on-tertiary": "#68000a",
+                        "on-secondary": "#273140",
+                        "on-primary-fixed": "#002113",
+                        "background": "#131315",
+                        "surface-container-low": "#1c1b1d",
+                        "inverse-surface": "#e5e1e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "gutter-desktop": "24px",
+                        "gutter-mobile": "16px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "data-lg": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "data-md": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "data-lg": ["18px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "data-md": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e1e4;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for abyssal theme */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3c4a42;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4edea3;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="dark font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar Section -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant dark:border-outline-variant flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary">gavel</span>
+<h1 class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary">MARKET COMPS</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 duration-100">
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-surface-variant">sensors</span>
+</button>
+</div>
+</header>
+<main class="pt-16 pb-24 min-h-screen max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Sticky Search & Filter Canvas -->
+<div class="sticky top-16 z-40 bg-background/95 backdrop-blur-sm pt-4 pb-4 space-y-4">
+<!-- Search Bar -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-outline transition-all" placeholder="Search address or neighborhood..." type="text"/>
+</div>
+<!-- Filter Row -->
+<div class="flex flex-wrap gap-3 items-center">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Property Type</span>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-label-caps font-label-caps">All</button>
+<button class="px-4 py-1.5 border border-outline-variant hover:border-primary text-on-surface-variant rounded-full text-label-caps font-label-caps transition-colors">Residential</button>
+<button class="px-4 py-1.5 border border-outline-variant hover:border-primary text-on-surface-variant rounded-full text-label-caps font-label-caps transition-colors">Commercial</button>
+<button class="hidden md:block px-4 py-1.5 border border-outline-variant hover:border-primary text-on-surface-variant rounded-full text-label-caps font-label-caps transition-colors">Land</button>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant mx-2 hidden md:block"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Sale Date</span>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 border border-outline-variant hover:border-primary text-on-surface-variant rounded-full text-label-caps font-label-caps transition-colors">6 Months</button>
+<button class="px-4 py-1.5 bg-surface-container-high border border-outline-variant text-on-surface rounded-full text-label-caps font-label-caps">1 Year</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparable Properties List -->
+<div class="mt-6 space-y-4">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant">
+<h2 class="font-label-caps text-label-caps text-outline">RESULTS: 24 PROPERTIES FOUND</h2>
+<button class="flex items-center gap-1 text-primary hover:underline">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+<span class="font-label-caps text-label-caps">Distance</span>
+</button>
+</div>
+<!-- List Items -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Property 1 -->
+<div class="group flex items-center gap-4 bg-surface-container-low border border-outline-variant p-3 rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.99] duration-100">
+<div class="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant">
+<img alt="Suburban residential property" class="w-full h-full object-cover" data-alt="A high-contrast architectural photograph of a modern residential home in Texas, featuring clean lines and dark exterior finishes. The scene is shot during the golden hour, creating deep shadows and vibrant emerald-green lawn highlights. The overall mood is sophisticated and precise, matching a luxury real estate digital dashboard aesthetic with professional lighting and sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUcDvpksMyf6LMMAhXTnzkgQm6V323gCw0tVCpfczI6RTo5aFHlA7uuQexoRlNdW5l_9i4adA2pqtKGYmdEezpxa-UmqU-KOxTeMCi8JYmBARVNdXzdQd8dOstW5j36loC2JQpQAtF4KizXuY5sqlWGPJvG5x_1yUoIUukHF463xB4aOj3ZkvlNPIyAOAhUoD24W_N_zgUojfFOkpjX7Ja0bQ-AmxGsDndjCeGj0tLCNTAx6Bc_UyziHQEktjT_-8qtbZIEB-vs6Q"/>
+<div class="absolute top-1 left-1 bg-black/70 px-1.5 py-0.5 rounded text-[10px] font-label-caps text-primary border border-primary/30">LOT 402</div>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-headline-md text-[16px] text-on-surface line-clamp-1">123 Austin Way, Austin, TX</span>
+<span class="font-data-lg text-data-lg text-primary">$450,000</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0.4 miles away</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex gap-3">
+<span class="font-label-caps text-[10px] text-outline">3 BEDS</span>
+<span class="font-label-caps text-[10px] text-outline">2 BATHS</span>
+<span class="font-label-caps text-[10px] text-outline">1,850 SQFT</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Property 2 -->
+<div class="group flex items-center gap-4 bg-surface-container-low border border-outline-variant p-3 rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.99] duration-100">
+<div class="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant">
+<img alt="Modern villa property" class="w-full h-full object-cover" data-alt="A cinematic wide-angle shot of a contemporary luxury villa at twilight, emphasizing dramatic architectural lighting against a deep obsidian night sky. The property features expansive glass walls reflecting emerald-tinted pool lights. The image conveys a high-stakes financial terminal aesthetic with sharp contrasts and technical precision in every detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1SVA5gYCzBJNIzy0gXGHvbfP_dOODaoyxFq8_Oifydl4G1FMHyALeec6daiMQZIwVOCfVWut_dwP6DF9y_EXgM20HbI8QGcQTgCCsuiB4WVHMtvvG3TzVTnFvrA4eCSkOx53QFB5iLB47O6hGAjoSRj8pmJbKb38C2pIBdkIg7LGjTVvrjUpB5TxD19GWhPfX9FdAzCC3pVex1c7I-XeHde8_RJ6RBkfR1GbUmVLjtVR3_OjjOJXOamVUgDQjyX9WJUrwS_VsraQ"/>
+<div class="absolute top-1 left-1 bg-black/70 px-1.5 py-0.5 rounded text-[10px] font-label-caps text-primary border border-primary/30">LOT 408</div>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-headline-md text-[16px] text-on-surface line-clamp-1">882 Congress Ave, Austin, TX</span>
+<span class="font-data-lg text-data-lg text-primary">$1,250,000</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0.8 miles away</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex gap-3">
+<span class="font-label-caps text-[10px] text-outline">5 BEDS</span>
+<span class="font-label-caps text-[10px] text-outline">4 BATHS</span>
+<span class="font-label-caps text-[10px] text-outline">4,200 SQFT</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Property 3 -->
+<div class="group flex items-center gap-4 bg-surface-container-low border border-outline-variant p-3 rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.99] duration-100">
+<div class="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant">
+<img alt="Residential house" class="w-full h-full object-cover" data-alt="A professional real estate photograph of a charming but modern Texas brick home, captured with high dynamic range to show detail in both dark brickwork and bright sky. The lawn is a deep, saturated green, echoing the design system's emerald accents. The composition is centered and symmetrical, suggesting authority and trust in the property data presented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYA7TZOnUaX7uLPFTKci8fJYMTmu2xFn4V5bORLV0iY9VMZ2WThUiF4oTKeId7Zpz-4CukGmav8SIDWMnxMpkjeqWTOPa6zA9BwvdANscjj7Ml2llhyjK42xefHjXJ6jhsZ5Xc8ARGWC9qgyjGf8RrBGwqWQHmeWIFH-lFPZcaAgRox_ltBfPqH9yOo-lwihvR5ZqUoKTdUzS96WEC1uZgyWhP-zJhXcVPQPwIMu6EztDAWv4NkrFQf2xWVEHW6G1qXInNu0qOqQg"/>
+<div class="absolute top-1 left-1 bg-black/70 px-1.5 py-0.5 rounded text-[10px] font-label-caps text-primary border border-primary/30">LOT 415</div>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-headline-md text-[16px] text-on-surface line-clamp-1">45 Rainey St, Austin, TX</span>
+<span class="font-data-lg text-data-lg text-primary">$615,000</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.2 miles away</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex gap-3">
+<span class="font-label-caps text-[10px] text-outline">2 BEDS</span>
+<span class="font-label-caps text-[10px] text-outline">2 BATHS</span>
+<span class="font-label-caps text-[10px] text-outline">1,200 SQFT</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Property 4 -->
+<div class="group flex items-center gap-4 bg-surface-container-low border border-outline-variant p-3 rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.99] duration-100">
+<div class="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant">
+<img alt="Luxury home" class="w-full h-full object-cover" data-alt="An ultra-modern architectural facade of a steel and glass structure at night, with sharp lines and high-contrast lighting. Glowing emerald interior lights are visible through the windows, creating a sense of digital luxury and exclusivity. The image is framed to emphasize structural precision, reinforcing the portal's brand identity of technical authority and market data accuracy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkhKSxiMz5TC6TMNSjuEEtte5XpqWvvI7hQccesrnyGIa5MVOoAeej270b5oIyMsNyXZggR7NCfAEwd2tifyOpGeAyqKuH2zR7bysgEt5o1Gu5Uoqj2fY9wFb99gyY5G7wK75zp06WSl0Us20NvvEMXA7beiIaxGkkdtCmyBkiJVS8Xh5vQlY10QLFavGLEA8_Wv9h-xbKe3zdrTJe8Nkt_c_jLwRYSWmqWF_I448-q_D54INXQRkdpBrvz-ArZQ5o6gSKr3WHm_E"/>
+<div class="absolute top-1 left-1 bg-black/70 px-1.5 py-0.5 rounded text-[10px] font-label-caps text-primary border border-primary/30">LOT 422</div>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-headline-md text-[16px] text-on-surface line-clamp-1">311 E 5th St, Austin, TX</span>
+<span class="font-data-lg text-data-lg text-primary">$890,000</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.5 miles away</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex gap-3">
+<span class="font-label-caps text-[10px] text-outline">4 BEDS</span>
+<span class="font-label-caps text-[10px] text-outline">3 BATHS</span>
+<span class="font-label-caps text-[10px] text-outline">2,450 SQFT</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Section -->
+<!-- Market tab is highlighted as parent category -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-t border-outline-variant dark:border-outline-variant flex justify-around items-center h-20 pb-safe">
+<div class="flex flex-col items-center justify-center text-primary dark:text-primary bg-secondary-container/30 rounded-xl px-4 py-1 active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-caps text-label-caps uppercase">Market</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-caps text-label-caps uppercase">Map</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">notifications_active</span>
+<span class="font-label-caps text-label-caps uppercase">Alerts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-caps text-label-caps uppercase">Portfolio</span>
+</div>
+</nav>
+</body></html>
