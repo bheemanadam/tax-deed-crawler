@@ -12,7 +12,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:04"
+    "last_updated": "2026-06-05 11:57:26"
   },
   {
     "county": "Galveston",
@@ -27,7 +27,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:04"
+    "last_updated": "2026-06-05 11:57:26"
   },
   {
     "county": "Cameron",
@@ -42,7 +42,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:04"
+    "last_updated": "2026-06-05 11:57:27"
   },
   {
     "county": "Bexar",
@@ -57,7 +57,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:05"
+    "last_updated": "2026-06-05 11:57:27"
   },
   {
     "county": "Elpaso",
@@ -72,7 +72,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:05"
+    "last_updated": "2026-06-05 11:57:27"
   },
   {
     "county": "Nueces",
@@ -87,7 +87,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:05"
+    "last_updated": "2026-06-05 11:57:27"
   },
   {
     "county": "Dallas",
@@ -102,7 +102,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:05"
+    "last_updated": "2026-06-05 11:57:28"
   },
   {
     "county": "Montgomery",
@@ -117,7 +117,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:06"
+    "last_updated": "2026-06-05 11:57:28"
   },
   {
     "county": "Hidalgo",
@@ -132,7 +132,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:06"
+    "last_updated": "2026-06-05 11:57:28"
   },
   {
     "county": "Travis",
@@ -147,7 +147,7 @@
       "register",
       "login"
     ],
-    "last_updated": "2026-06-02 12:36:06"
+    "last_updated": "2026-06-05 11:57:28"
   },
   {
     "county": "Harris",
@@ -158,6 +158,6 @@
       "realauction",
       "sale"
     ],
-    "last_updated": "2026-06-02 12:36:07"
+    "last_updated": "2026-06-05 11:57:29"
   }
 ]
